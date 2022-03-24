@@ -5,53 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Figuras Geometricas </title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <header>
-        <h1>Figuras Geometricas</h1>
-        <p>Primer taller del curso practico de JavaScript</p>
+    <header class="header-container">
+        <h1>Figuras Geométricas</h1>
+        <a href="../index.html">
+            <img src="https://img.icons8.com/external-kmg-design-glyph-kmg-design/32/ffffff/external-home-ui-essential-kmg-design-glyph-kmg-design.png"/>
+        </a>
     </header>
-
-    <section class="square-calculator">
-        <h2>Calcula el area y perimetro de un cuadrado</h2>
-        <form action="">
-            <label for="inputCuadrado">Escribe cuanto mide cada lado de tu cuadrado</label>
-            <input id="inputCuadrado" type="number">
-            <button type="button" onclick="calcularPerimetroCuadrado()">Calcular Perimetro</button>
-            <button type="button" onclick="calcularAreaCuadrado()">Calcular Area</button>
-        </form>
-    </section>
-    <br>
-    <section class="triangle-calculator">
-        <h2>Calcula el area y el perimetro de un triangulo</h2>
-        <form action="">
-            <label for="inputLado1">Escribe el valor del lado 1</label>
-            <input id="inputLado1" type="number">
-            <br>
-            <label for="inputLado2">Escribe el valor del lado 2</label>
-            <input id="inputLado2" type="number">
-            <br>
-            <label for="inputBase">Escribe el valor de la base</label>
-            <input id="inputBase" type="number">
-            <br>
-            <label for="inputAltura">Escribe el valor de la altura</label>
-            <input id="inputAltura" type="number">
-            <button type="button" onclick="calcularPerimetroTriangulo()">Calcular Perimetro</button>
-            <button type="button" onclick="calcularAreaTriangulo()">Calcular Area</button>
-        </form>
-    </section>
-    <br>
-    <section class="circle-calculator">
-        <h2>Calcula el area y el perimetro de un Circulo</h2>
-        <form action="">
-            <label for="inputRadio">Digite el valor del radio</label>
-            <input id="inputRadio" type="number">
-            <br>
-            <button type="button" onclick="calcularPerimetroCirculo()">Calcular Perimetro</button>
-            <button type="button" onclick="calcularAreaCirculo()">Calcular Area</button>
-        </form>
-    </section>
-
+    <main class="wrapper">
+        <section class="card square-calculator">
+            <h2 class="title">Calcula el área y perímetro de un cuadrado</h2>
+            <form action="">
+                <div class="inner-wrapper square-container">
+                    <label class="description descrip-square" for="inputCuadrado">Escribe cuanto mide cada lado de tu cuadrado</label>
+                    <input class="input-g input-square" id="inputCuadrado" type="number" placeholder="Lado del cuadrado">
+                    <button class="primary-button btnPer" type="button" onclick="calcularPerimetroCuadrado()">Calcular Perimetro</button>
+                    <button class="primary-button btnArea" type="button" onclick="calcularAreaCuadrado()">Calcular Area</button>
+                </div>
+            </form>
+            <div class="answ-wrapper">
+                <div class="answers">
+                    <p id="resultPer"></p>
+                </div>
+                <div class="answers">
+                    <p id="resultAr"></p>
+                </div>
+            </div>
+        </section>
+        <section class="triangle-calculator">
+            <h2 class="title">Calcula el área y el perímetro de un triángulo</h2>
+            <form action="">
+                <div class="triangle-container">
+                    <label class="descrip-lado1" for="inputLado1">Valor del lado 1</label>
+                    <input placeholder="Lado 1" class="triangle-input input-l1" id="inputLado1" type="number">
+                    <label class="descrip-lado2" for="inputLado2">Valor del lado 2</label>
+                    <input placeholder="Lado 2" class="triangle-input input-l2" id="inputLado2" type="number">
+                    <label class="descrip-base" for="inputBase">Valor de la base</label>
+                    <input placeholder="Base" class="triangle-input input-base" id="inputBase" type="number">
+                    <label class="descrip-high" for="inputAltura">Valor de la altura</label>
+                    <input placeholder="Altura" class="triangle-input input-high" id="inputAltura" type="number">
+                    <button class="primary-button btnPerTr btnPer" type="button" onclick="calcularPerimetroTriangulo()">Calcular Perimetro</button>
+                    <button class="primary-button btnArTr btnArea" type="button" onclick="calcularAreaTriangulo()">Calcular Area</button>
+                </div>
+            </form>
+            <div class="answ-wrapper">
+                <div class="answers">
+                    <p id="resultPerTr"></p>
+                </div>
+                <div class="answers">
+                    <p id="resultArTr"></p>
+                </div>
+            </div>
+        </section>
+        <section class="card circle-calculator">
+            <h2 class="title">Calcula el área y el perímetro de un Circulo</h2>
+            <form action="">
+                <div class="inner-wrapper circle-container">
+                    <label class="description" for="inputRadio">Digite el valor del radio</label>
+                    <input class="input-g" id="inputRadio" type="number" placeholder="Radio del circulo">
+                    <button class="primary-button btnPer" type="button" onclick="calcularPerimetroCirculo()">Calcular Perimetro</button>
+                    <button class="primary-button btnArea" type="button" onclick="calcularAreaCirculo()">Calcular Area</button>
+                </div>
+            </form>
+            <div class="answ-wrapper">
+                <div class="answers">
+                    <p id="resultPerCir"></p>
+                </div>
+                <div class="answers">
+                    <p id="resultArCir"></p>
+                </div>
+            </div>
+        </section>
+    </main>
     <script src="./figuras.js"></script>
 </body>
 </html>

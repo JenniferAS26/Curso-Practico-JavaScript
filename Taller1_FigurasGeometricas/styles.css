@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --soft-pink: #D9A3B1;
+    --creamy-pink: #A66F83;
+    --dark-pink: #734C5E;
+    --dark-brown: #221A26;
+    --light-pink: #F2B3B3;
+    --very-light-pink: #FFDBDB;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Inconsolata', monospace;
+}
+
+body {
+    background: var(--creamy-pink);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--creamy-pink);
+    padding: 10px;
+    box-shadow: inset 10px 10px 20px #734d5a,
+                inset -10px -10px 20px #d991ac;
+    margin-bottom: 15px;
+}
+
+.header-container h1 {
+    color: var(--soft-pink);
+    font-size: 2.7rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.card {
+    border-radius: 25px;
+    box-shadow:  10px 10px 20px #734d5a,
+                -10px -10px 20px #d991ac;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    background-color: var(--creamy-pink);
+    margin-bottom: 25px;
+}
+
+.title {
+    height: 50px;
+    font-size: 1.8rem;
+    color: var(--light-pink);
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.inner-wrapper {
+    width: 100%;
+    height: 200px;
+    /* border: 2px solid paleturquoise; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 90px 60px;
+    grid-template-areas: "label label"
+                        "box box"
+                        "btnPer btnArea";
+}
+
+.description {
+    grid-area: label;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    align-self: center;
+    color: var(--soft-pink);
+    text-align: center;
+}
+
+.input-g {
+    grid-area: box;
+    background-color: var(--very-light-pink);
+    border: 1px solid var(--dark-pink);
+    border-radius: 8px;
+    margin: 15px 0 15px 0;
+    padding: 1rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--dark-pink);
+}
+
+.primary-button {
+    text-decoration: none;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--very-light-pink);
+    text-align: center;
+    border-radius: 30px;
+    background: #DCB6BD;
+    background: radial-gradient(circle, rgba(217,163,177,1) 0%, rgba(166,124,135,1) 100%);
+    background-size: 300%;
+    z-index: 1;
+}
+
+.primary-button:hover {
+    animation: ani 8s linear infinite;
+    border: none;
+}
+
+.btnPer {
+    grid-area: btnPer;
+    margin: 5px 10px 5px 5px;
+    letter-spacing: 2px;
+}
+
+.btnArea {
+    grid-area: btnArea;
+    margin: 5px 5px 5px 10px;
+    letter-spacing: 2px;
+}
+
+.answ-wrapper {
+    display: flex;
+}
+
+.answers {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: 25px;
+}
+
+.answers p {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--dark-pink);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.triangle-calculator {
+    border-radius: 25px;
+    box-shadow:  10px 10px 20px #734d5a,
+                -10px -10px 20px #d991ac;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 400px;
+    padding: 10px;
+    background-color: var(--creamy-pink);
+    margin-bottom: 25px;
+}
+
+.triangle-container {
+    width: 300px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(2, 140px);
+    grid-template-rows: 25px 75px 25px 75px 50px 50px;
+    grid-template-areas: "lb1 lb2"
+                "inpL1 inpL2"
+                "lb-base lb-altura"
+                "inpBase inpAltura"
+                "btnPerT btnPerT"
+                "btnArT btnArT";
+}
+
+.descrip-lado1 {
+    grid-area: lb1;
+    align-self: center;
+    justify-self: center;
+    color: var(--soft-pink);
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.input-l1 {
+    grid-area: inpL1;
+}
+
+.descrip-lado2 {
+    grid-area: lb2;
+    align-self: center;
+    justify-self: center;
+    color: var(--soft-pink);
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.input-l2 {
+    grid-area: inpL2;
+}
+
+.descrip-base {
+    grid-area: lb-base;
+    align-self: center;
+    justify-self: center;
+    color: var(--soft-pink);
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.input-base {
+    grid-area: inpBase;
+}
+
+.descrip-high {
+    grid-area: lb-altura;
+    align-self: center;
+    justify-self: center;
+    color: var(--soft-pink);
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.input-high {
+    grid-area: inpAltura;
+}
+
+.btnPerTr {
+    grid-area: btnPerT;
+    margin: 5px;
+}
+
+.btnArTr {
+    grid-area: btnArT;
+    margin: 5px;
+}
+
+.triangle-input {
+    background-color: var(--very-light-pink);
+    border: 1px solid var(--dark-pink);
+    border-radius: 8px;
+    margin: 15px 10px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--dark-pink);
+    padding: 1rem;
+}
+
+@keyframes ani {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 400%;
+    }
+}

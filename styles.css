@@ -15,9 +15,12 @@
     --white: #ffffff;
 }
 
-body {
+html {
     font-size: 62.2%;
     font-family: 'Inconsolata', monospace;
+}
+
+body {
     background-color: var(--mint-green);
 }
 
