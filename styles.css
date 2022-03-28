@@ -42,9 +42,10 @@ a {
 .header-nav h1 {
     /* color: var(--less-dark-green); */
     color: #93BFB7;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     font-weight: 900;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     text-shadow: 4px 2px 4px #007566;
 }
 
@@ -68,7 +69,7 @@ a {
 }
 
 .main-container {
-    height: 100vh;
+    /* height: 100vh; */
     display: grid;
     justify-content: center;
     justify-items: center;
@@ -103,7 +104,6 @@ a {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    /* border: 2px solid palevioletred; */
 }
 
 .content-wrapper p {
@@ -121,7 +121,7 @@ a {
 .shapes-wrapper {
     /* border: 2px solid palevioletred; */
     width: 100%;
-    height: 150px;
+    /* height: 150px; */
     display: flex;
     align-items: center;
 }
@@ -146,7 +146,60 @@ a {
     font-size: 2.2rem;
 }
 
-.footer {
-    position: absolute;
-    bottom: 0;
+@media (max-width: 530px) {
+    .header-nav h1 {
+        font-size: 2rem;
+        text-transform: uppercase;
+        text-align: left;
+        letter-spacing: 2px;
+    }
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 100px;
+    }
+    .tasks {
+        height: 250px;
+        margin: 15px 0;
+    }
+    .content-wrapper {
+        height: 200px;
+    }
+}
+
+@media (min-width: 950px) {
+    .header {
+        width: 100%;
+    }
+    .header-nav h1 {
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        letter-spacing: 7px;
+    }
+    .wrapper-content {
+        display: flex;
+        justify-content: center;
+    }
+    .main-container {
+        width: 70%;
+        display: grid;
+        grid-template-columns: repeat(2, 500px);
+        grid-template-rows: repeat(2, 1fr);
+        margin: 100px 0;
+        row-gap: 50px;
+    }
+    .tasks {
+        width: 280px;
+        height: 350px;
+        margin: 25px 15px;
+    }
+    .task {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+    .content-wrapper p {
+        font-size: 4rem;
+        letter-spacing: 2.5px;
+    }
 }

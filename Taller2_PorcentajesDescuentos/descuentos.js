@@ -5,7 +5,7 @@ const porcentajeDelPrecioConDescuento = 100 - descuento; //85%
 const precioConDescuento = (precioOriginal * porcentajeDelPrecioConDescuento) / 100;
 
 console.log({
-    precioOriginal, 
+    precioOriginal,
     descuento,
     porcentajeDelPrecioConDescuento,
     precioConDescuento

@@ -5,28 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porcentajes y Descuentos</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <header>
+    <header class="header-container">
         <h1>Porcentajes y descuentos</h1>
-        <p>Taller 2 del curso practico JS</p>
+        <a href="../index.html">
+            <img src="https://img.icons8.com/external-kmg-design-glyph-kmg-design/32/ffffff/external-home-ui-essential-kmg-design-glyph-kmg-design.png"/>
+        </a>
     </header>
-
-    <section>
-        <h2>Calcula el precio a pagar de tus productos con descuento</h2>
-        <form action="">
-            <label for="inputPrice">Escribe el precio de tu producto</label>
-            <input id="inputPrice" type="number">
-            <br>
-            <label for="inputDiscount">Escribe el decuento de tu producto</label>
-            <input id="inputDiscount" type="number">
-            <button type="button" onclick="onClickButtonPriceDiscount()">Calcular el precio con descuento</button>
-
-            <p id="resultP"></p>
-        </form>
-    </section>
+    <main class="wrapper">
+        <section class="card-container">
+            <h2>Calcula el precio a pagar de los productos con descuento</h2>
+            <form action="">
+                <div class="content-wrapper">
+                    <div class="form-container">
+                        <label class="labels lbl-price" for="inputPrice">Precio del producto</label>
+                        <input class="inputs inp-price" id="inputPrice" type="number">
+                        <label class="labels lbl-discount" for="inputDiscount">Descuento del producto</label>
+                        <input class="inputs inp-discount" id="inputDiscount" type="number">
+                        <button class="primary-button btnCalc" type="button" onclick="onClickButtonPriceDiscount()">Calcular el precio con descuento</button>
+                    </div>
+                    <div class="result-container">
+                        <p class="result" id="resultP">Resultado</p>
+                    </div>
+                </div>
+                
+            </form>
+        </section>
+    </main>
     
-
     <script src="./descuentos.js"></script>
 </body>
 </html>

@@ -24,7 +24,7 @@ lista1.map(function(elemento){ // sumamos la cantidad que aparece un elemento en
 });
 
 const lista1Array = Object.entries(lista1Count).sort(
-    function(elementoA, elementoB) { 
+    function(elementoA, elementoB) {
         return elementoA[1] - elementoB[1]
     }
 ); // le enviamos como argumento el objeto que queremos convertir en array y ordenamos
@@ -33,7 +33,14 @@ const moda = lista1Array[lista1Array.length - 1];*/
 
 /* ENCAPSULAMIENTO */
 
-function calcularModa(lista) {
+function calcularModa() {
+    const data = document.getElementById('inputModa');
+    const numbers = data.value.split(',');
+    let lista = [];
+
+    for (let i = 0; i < numbers.length; i++){
+        lista.push(parseInt(numbers[i]))
+    }
     // contar cuantas veces aparece cada numero
     const listaCount = {}; // tenemos una lista 1 y la estamos convirtiendo en un objeto
 
@@ -44,15 +51,15 @@ function calcularModa(lista) {
             listaCount[elemento] = 1;
         }
     });
-
     const listaArray = Object.entries(listaCount).sort(
-        function(elementoA, elementoB) { 
+        function(elementoA, elementoB) {
             return elementoA[1] - elementoB[1]
         }
     ); // le enviamos como argumento el objeto que queremos convertir en array y ordenamos
 
     const moda = listaArray[listaArray.length - 1];
-
-    return moda;
+    const resultModa = document.getElementById('resultMod');
+    resultModa.innerHTML = `La moda es: ${moda[0]}`;
+    // return moda;
 }
 

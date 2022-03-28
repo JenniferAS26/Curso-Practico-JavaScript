@@ -33,7 +33,7 @@ if (esPar(lista1.length)) {
     mediana = lista1[mitadLista1]
 }*/
 
-/* ENCAPSULAMIENTO */ 
+/* ENCAPSULAMIENTO */
 
 function calcularMediaAritmetica(lista) {
     const sumaLista = lista.reduce(
@@ -43,11 +43,18 @@ function calcularMediaAritmetica(lista) {
     );
 
     const promedioLista = sumaLista / lista.length;
-    
     return promedioLista;
 }
 
-function calcularMediana(lista) {
+function calcularMediana() {
+    const data = document.getElementById('inputMediana');
+    const numbers = data.value.split(',');
+    let lista = [];
+
+    for (let i = 0; i < numbers.length; i++){
+        lista.push(parseInt(numbers[i]))
+    }
+
     lista.sort(function(a, b){ // ordena la lista
         return a - b
     });
@@ -76,7 +83,10 @@ function calcularMediana(lista) {
         mediana = lista[mitadLista];
     }
 
-    return mediana;
+    const resulMediana = document.getElementById('resultMed');
+    resulMediana.innerHTML = `La mediana es: ${mediana}`;
+
+    // return mediana;
 }
 
 
